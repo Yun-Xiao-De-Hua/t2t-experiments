@@ -17,7 +17,10 @@ def prepare(cfg):
     root = Path(cfg['paths']['prepared'])
     root.mkdir(parents=True, exist_ok=False)
     manifest = {'schema_version': 1, 'sources': {}, 'conditions': cfg['conditions']}
-    for split, key in [('evaluation', 'datasets'), ('warmup', 'warmup_datasets')]:
+    splits = [('evaluation', 'datasets')]
+    if cfg.get('experiment_type') != 'receiver_only':
+        splits.append(('warmup', 'warmup_datasets'))
+    for split, key in splits:
         out = root / split
         out.mkdir()
         for dataset, path in cfg['paths'][key].items():
@@ -40,6 +43,8 @@ def prepare(cfg):
             manifest['sources'][split+':'+dataset] = {'sha256':file_hash(path), 'samples':len(rows)}
     # Warmup must contain non-test samples. Users provide synthetic code tasks.
     for dataset in cfg['datasets']:
+        if cfg.get('experiment_type') == 'receiver_only':
+            continue
         evaluation = read_rows(root / 'evaluation' / f'{dataset}.public.jsonl')
         warmup = read_rows(root / 'warmup' / f'{dataset}.public.jsonl')
         if {s['q'] for s in evaluation} & {s['q'] for s in warmup}:

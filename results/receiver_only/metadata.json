@@ -1,0 +1,598 @@
+{
+  "schema_version": 1,
+  "representation": "seven_category_non_text_metrics",
+  "experiment_type": "receiver_only",
+  "prompt_version": "receiver_only_v1",
+  "original_prompt_sha256": "1c64b20eca29d69bc73faf82eb817247b9d0d81f719061063f4583c345ff8e06",
+  "packaged_prompts_sha256": "1c64b20eca29d69bc73faf82eb817247b9d0d81f719061063f4583c345ff8e06",
+  "units": {
+    "*_s": "seconds",
+    "*_ms": "milliseconds",
+    "*bytes*": "bytes",
+    "*tokens*": "token counts",
+    "scores": "fraction in [0,1]"
+  },
+  "historical_acceptance_policy": "user_waived",
+  "historical_acceptance_cases": 0,
+  "configurations": {
+    "f5df68535629aa3a": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "receiver_only_v1",
+      "prefill_mode": "single_full_input",
+      "sender_executed": false,
+      "condition": {
+        "condition_id": "R06__gsm8k__receiver_only__full",
+        "dataset": "gsm8k",
+        "model": "Qwen/Qwen3-0.6B",
+        "path": "direct_full",
+        "protocol": "receiver_only"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca"
+        }
+      }
+    },
+    "1de4e6084e1b0fed": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "receiver_only_v1",
+      "prefill_mode": "single_full_input",
+      "sender_executed": false,
+      "condition": {
+        "condition_id": "R06__hotpotqa__receiver_only__full",
+        "dataset": "hotpotqa",
+        "model": "Qwen/Qwen3-0.6B",
+        "path": "direct_full",
+        "protocol": "receiver_only"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca"
+        }
+      }
+    },
+    "b832052e7a89452f": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "receiver_only_v1",
+      "prefill_mode": "single_full_input",
+      "sender_executed": false,
+      "condition": {
+        "condition_id": "R06__humaneval__receiver_only__full",
+        "dataset": "humaneval",
+        "model": "Qwen/Qwen3-0.6B",
+        "path": "direct_full",
+        "protocol": "receiver_only"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca"
+        }
+      }
+    },
+    "a18fd22a9a55ac1c": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "receiver_only_v1",
+      "prefill_mode": "single_full_input",
+      "sender_executed": false,
+      "condition": {
+        "condition_id": "R17__gsm8k__receiver_only__full",
+        "dataset": "gsm8k",
+        "model": "Qwen/Qwen3-1.7B",
+        "path": "direct_full",
+        "protocol": "receiver_only"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+        }
+      }
+    },
+    "de0a3f839699257a": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "receiver_only_v1",
+      "prefill_mode": "single_full_input",
+      "sender_executed": false,
+      "condition": {
+        "condition_id": "R17__hotpotqa__receiver_only__full",
+        "dataset": "hotpotqa",
+        "model": "Qwen/Qwen3-1.7B",
+        "path": "direct_full",
+        "protocol": "receiver_only"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+        }
+      }
+    },
+    "1db86e5773f14bf9": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "receiver_only_v1",
+      "prefill_mode": "single_full_input",
+      "sender_executed": false,
+      "condition": {
+        "condition_id": "R17__humaneval__receiver_only__full",
+        "dataset": "humaneval",
+        "model": "Qwen/Qwen3-1.7B",
+        "path": "direct_full",
+        "protocol": "receiver_only"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+        }
+      }
+    },
+    "6cb5595055e3093a": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "receiver_only_v1",
+      "prefill_mode": "single_full_input",
+      "sender_executed": false,
+      "condition": {
+        "condition_id": "R40__gsm8k__receiver_only__full",
+        "dataset": "gsm8k",
+        "model": "Qwen/Qwen3-4B",
+        "path": "direct_full",
+        "protocol": "receiver_only"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+        }
+      }
+    },
+    "8fdaf16d95cc68d3": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "receiver_only_v1",
+      "prefill_mode": "single_full_input",
+      "sender_executed": false,
+      "condition": {
+        "condition_id": "R40__hotpotqa__receiver_only__full",
+        "dataset": "hotpotqa",
+        "model": "Qwen/Qwen3-4B",
+        "path": "direct_full",
+        "protocol": "receiver_only"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+        }
+      }
+    },
+    "cbf3b7d2c2df83e1": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "receiver_only_v1",
+      "prefill_mode": "single_full_input",
+      "sender_executed": false,
+      "condition": {
+        "condition_id": "R40__humaneval__receiver_only__full",
+        "dataset": "humaneval",
+        "model": "Qwen/Qwen3-4B",
+        "path": "direct_full",
+        "protocol": "receiver_only"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c"
+        }
+      }
+    }
+  },
+  "module_parameters": {
+    "fce0327efa2a5974": {
+      "base_models": {
+        "receiver": {
+          "actual_unique_parameters": 596049920,
+          "allocated_after_load": 1192638976,
+          "bf16_weight_bytes_estimate": 1192099840,
+          "checkpoint_tensor_payload_bytes": 1503264768,
+          "load_wall_s": 0.9395932899788022,
+          "reserved_after_load": 1509949440,
+          "stored_tensor_elements": 751632384,
+          "unique_parameter_estimate": 596049920
+        }
+      },
+      "communication_modules": {
+        "conversion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "fusion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "pooling": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "projection": {
+          "deployed": false,
+          "parameters": 0
+        }
+      },
+      "sender": {
+        "status": "not_applicable",
+        "value": null
+      }
+    },
+    "2c5d4f12ad94912f": {
+      "base_models": {
+        "receiver": {
+          "actual_unique_parameters": 1720574976,
+          "allocated_after_load": 3450077696,
+          "bf16_weight_bytes_estimate": 3441149952,
+          "checkpoint_tensor_payload_bytes": 4063479808,
+          "load_wall_s": 4.247061671921983,
+          "reserved_after_load": 4074766336,
+          "stored_tensor_elements": 2031739904,
+          "unique_parameter_estimate": 1720574976
+        }
+      },
+      "communication_modules": {
+        "conversion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "fusion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "pooling": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "projection": {
+          "deployed": false,
+          "parameters": 0
+        }
+      },
+      "sender": {
+        "status": "not_applicable",
+        "value": null
+      }
+    },
+    "9f70aaf8cdaac6eb": {
+      "base_models": {
+        "receiver": {
+          "actual_unique_parameters": 4022468096,
+          "allocated_after_load": 8053999104,
+          "bf16_weight_bytes_estimate": 8044936192,
+          "checkpoint_tensor_payload_bytes": 8044936192,
+          "load_wall_s": 13.554617137997411,
+          "reserved_after_load": 8107589632,
+          "stored_tensor_elements": 4022468096,
+          "unique_parameter_estimate": 4022468096
+        }
+      },
+      "communication_modules": {
+        "conversion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "fusion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "pooling": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "projection": {
+          "deployed": false,
+          "parameters": 0
+        }
+      },
+      "sender": {
+        "status": "not_applicable",
+        "value": null
+      }
+    }
+  },
+  "environments": {
+    "21d8a8ae28d69e9d": {
+      "gpu_name": "NVIDIA GeForce RTX 3090",
+      "cuda_runtime": "12.8",
+      "precision": "bfloat16",
+      "backend": "sdpa",
+      "threads": 2,
+      "batch_size": 1,
+      "versions": {
+        "tokenizers": "0.22.2",
+        "torch": "2.8.0+cu128",
+        "transformers": "4.57.6"
+      },
+      "timing": "CUDA Event and synchronized wall; model load/warmup/writes/scoring excluded",
+      "resident_model_count": 1,
+      "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "prefill": "single complete input"
+    },
+    "17da149b7251dedb": {
+      "gpu_name": "NVIDIA GeForce RTX 3090",
+      "cuda_runtime": "12.8",
+      "precision": "bfloat16",
+      "backend": "sdpa",
+      "threads": 2,
+      "batch_size": 1,
+      "versions": {
+        "tokenizers": "0.22.2",
+        "torch": "2.8.0+cu128",
+        "transformers": "4.57.6"
+      },
+      "timing": "CUDA Event and synchronized wall; model load/warmup/writes/scoring excluded",
+      "resident_model_count": 1,
+      "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+      "prefill": "single complete input"
+    },
+    "8d805129eb0d17e0": {
+      "gpu_name": "NVIDIA GeForce RTX 3090",
+      "cuda_runtime": "12.8",
+      "precision": "bfloat16",
+      "backend": "sdpa",
+      "threads": 2,
+      "batch_size": 1,
+      "versions": {
+        "tokenizers": "0.22.2",
+        "torch": "2.8.0+cu128",
+        "transformers": "4.57.6"
+      },
+      "timing": "CUDA Event and synchronized wall; model load/warmup/writes/scoring excluded",
+      "resident_model_count": 1,
+      "model_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+      "prefill": "single complete input"
+    }
+  },
+  "files": {
+    "R06/gsm8k.jsonl.gz": {
+      "sha256": "8641d1d5d5a3cdf210edcbd8216328536b141778b9d6f470494bbeb3efd895c5",
+      "samples": 1319,
+      "bytes": 300583
+    },
+    "R06/hotpotqa.jsonl.gz": {
+      "sha256": "408129b146085e1af909f53a0d75d4c659c1272116aa090c366a6decd40b816d",
+      "samples": 7405,
+      "bytes": 1839920
+    },
+    "R06/humaneval.jsonl.gz": {
+      "sha256": "4ab1a34b5776f2b3a724cecc55aafd754f89f5dfe5d71a220f724e52ce279723",
+      "samples": 164,
+      "bytes": 39716
+    },
+    "R17/gsm8k.jsonl.gz": {
+      "sha256": "3d366a7667f9ea0f44b497d26e2de6aa29ea344ffdfa6ab55dae967ce71bb45c",
+      "samples": 1319,
+      "bytes": 300715
+    },
+    "R17/hotpotqa.jsonl.gz": {
+      "sha256": "2a7deb90e5dc53637ef892b0234e820f524331f23951a674ccb08847272f5f10",
+      "samples": 7405,
+      "bytes": 1840873
+    },
+    "R17/humaneval.jsonl.gz": {
+      "sha256": "62770da59850f718822ddc787dde290258c6bdc22cbdec66da05d8c6869ed49e",
+      "samples": 164,
+      "bytes": 39910
+    },
+    "R40/gsm8k.jsonl.gz": {
+      "sha256": "620d88d99a309360fa749ebd3a1e0e99f5f0973c31d7642a7b51db4a557c0c40",
+      "samples": 1319,
+      "bytes": 326468
+    },
+    "R40/hotpotqa.jsonl.gz": {
+      "sha256": "a66ffb5d090c8cbe5423840fa4a7a337309e6488b84a3569a2042181e5e198a8",
+      "samples": 7405,
+      "bytes": 2014726
+    },
+    "R40/humaneval.jsonl.gz": {
+      "sha256": "29ecfa6f7fe02401d6d546f0e1a6315c7110667bde28630aafb1e1c0af7a0cad",
+      "samples": 164,
+      "bytes": 43380
+    }
+  }
+}

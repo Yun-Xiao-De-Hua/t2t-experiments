@@ -102,6 +102,7 @@ def main():
     run.add_argument('--output',required=True,type=Path)
     run.add_argument('--resume',action='store_true')
     run.add_argument('--direction',action='append',choices=['M1','M2','M3'])
+    run.add_argument('--model',action='append',choices=['Qwen/Qwen3-0.6B','Qwen/Qwen3-1.7B','Qwen/Qwen3-4B'])
     run.add_argument('--dataset',action='append',choices=['gsm8k','hotpotqa','humaneval'])
     run.add_argument('--protocol',action='append',choices=['P1','P2','P3','P4'])
     run.add_argument('--wait-memory',action='store_true')
@@ -119,7 +120,11 @@ def main():
     elif args.command=='status':
         status(args.run_dir)
     elif args.command=='score':
-        score_run(cfg,args)
+        if cfg.get('experiment_type') == 'receiver_only':
+            from .receiver_only.scoring import score_run as score_receiver
+            score_receiver(cfg,args)
+        else:
+            score_run(cfg,args)
     else:
         from .scheduling import tmux
         if args.tmux:
@@ -130,7 +135,12 @@ def main():
             tmux(args.tmux,argv)
             return
         os.environ.setdefault('TOKENIZERS_PARALLELISM', 'false')
-        from .runner import run
+        if cfg.get('experiment_type') == 'receiver_only':
+            from .receiver_only.runner import run
+        else:
+            if args.model:
+                parser.error('--model is only available with receiver-only configuration')
+            from .runner import run
         run(cfg,args)
 
 

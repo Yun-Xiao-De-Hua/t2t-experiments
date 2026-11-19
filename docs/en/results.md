@@ -21,3 +21,7 @@ Per direction: GSM8K P1/P4 each 1,319; HotpotQA P1/P3/P4 each 7,405 and P2 7,345
 The 33 rows in summary.csv are reporting views of 24 conditions, including extra HotpotQA common-7,345 views. Use the common subset for cross-protocol comparisons; full-set scores are not matched comparisons with P2. Metrics are GSM8K final-number accuracy, HotpotQA answer_em/answer_f1 and isolated HumanEval pass@1, plus P4 verbatim restatement compliance and joint compliance/correctness.
 
 Point estimates and existing 95% bootstrap intervals (10,000 resamples, seed 42) are copied without recomputation; meaningless self-comparison columns are removed. Costs were measured on a shared GPU and do not establish load-independent causal speed comparisons. Hot pipeline timing excludes model load, warmup, writes, scoring and scheduling. CUDA events and synchronized wall times have different scopes.
+
+## Receiver-only single-model controls
+
+See [receiver-only reproduction](receiver_only.md) for the separate nine-condition config, inputs, commands, scoring, and results. The original 24 communication conditions are unchanged.

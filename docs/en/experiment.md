@@ -180,3 +180,7 @@ Receiver: "    return a + b\n"
 ```
 
 These are illustrative synthetic examples, not saved experiment outputs. The P2 example omits four distractors at each endpoint. Replace `[exact Q]` with the entire Q in actual P4 use.
+
+## Receiver-only single-model controls
+
+See [receiver-only reproduction](receiver_only.md) for the separate nine-condition config, inputs, commands, scoring, and results. The original 24 communication conditions are unchanged.

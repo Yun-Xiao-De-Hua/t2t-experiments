@@ -26,6 +26,17 @@ def file_hash(path):
     return h.hexdigest()
 
 
+def repository_root():
+    """Locate shared assets independently of configuration nesting depth."""
+    return Path(__file__).resolve().parent.parent
+
+
+def source_hashes():
+    """Include subpackages in resume signatures, using unambiguous relative keys."""
+    root = Path(__file__).resolve().parent
+    return {p.relative_to(root).as_posix(): file_hash(p) for p in sorted(root.rglob('*.py'))}
+
+
 def save_new(path, value):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -65,5 +76,5 @@ def load(path):
     cfg['models'] = json.loads(cfg['models_file'].read_text())
     os.environ['T2T_EXPERIMENT_FILE'] = str(path)
     os.environ['T2T_PROMPT_FILE'] = str(cfg['prompts_file'])
-    os.environ['T2T_HUMANEVAL_HELPER'] = str(path.parent.parent / 'third_party/humaneval_execution.py')
+    os.environ['T2T_HUMANEVAL_HELPER'] = str(repository_root() / 'third_party/humaneval_execution.py')
     return cfg

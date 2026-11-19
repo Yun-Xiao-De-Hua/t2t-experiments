@@ -1,0 +1,18 @@
+{
+  "pdf_sha256": "7b813047ebc65b97f57a3ae61317a2aa0adc85bc552dc7aba0208860073b89fe",
+  "pages": 3,
+  "display_rows_per_table": 9,
+  "numeric_values_checked": 105,
+  "all_matched": true,
+  "precision": {
+    "quality_percent": 2,
+    "latency_ms": 1
+  },
+  "hotpotqa_subset": "common_7345",
+  "summary_sha256": "6d8715bf8248832d9bfe81a334ccec4f888056d2618a32835bfb991a4d336a6e",
+  "latency_table_columns": [
+    "prefill_cuda_ms",
+    "decode_cuda_ms",
+    "total_cuda_ms"
+  ]
+}

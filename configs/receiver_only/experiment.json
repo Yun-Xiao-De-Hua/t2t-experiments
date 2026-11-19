@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "experiment_type": "receiver_only",
+  "version": "receiver_only_v1",
+  "models_file": "../models.json",
+  "prompts_file": "prompts.json",
+  "paths_file": "../paths.local.json",
+  "datasets": {
+    "gsm8k": {
+      "configuration": "main",
+      "upstream_split": "test",
+      "project_role": "test",
+      "records": 1319,
+      "revision": "3101c7d5072418e28b9008a6636bde82a006892c",
+      "metric": "final_answer_accuracy",
+      "model_input_fields": [
+        "question"
+      ],
+      "held_out_fields": [
+        "answer"
+      ]
+    },
+    "hotpotqa": {
+      "configuration": "distractor_v1",
+      "upstream_split": "validation",
+      "project_role": "test",
+      "records": 7405,
+      "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+      "metric": [
+        "answer_em",
+        "answer_f1"
+      ],
+      "model_input_fields": [
+        "question",
+        "context"
+      ],
+      "held_out_fields": [
+        "answer"
+      ]
+    },
+    "humaneval": {
+      "configuration": "original",
+      "upstream_split": "test",
+      "project_role": "test",
+      "records": 164,
+      "revision": "6d43fb980f9fee3c892a914eda09951f772ad10d",
+      "metric": "pass@1",
+      "model_input_fields": [
+        "prompt"
+      ],
+      "held_out_fields": [
+        "canonical_solution",
+        "test",
+        "entry_point"
+      ]
+    }
+  },
+  "runtime": {
+    "seed": 42,
+    "precision": "bfloat16",
+    "attention": "sdpa",
+    "batch_size": 1,
+    "cpu_threads": 2,
+    "warmup_per_condition": 0,
+    "reserve_bytes": 536870912,
+    "warmup_note": "Historical formal run waived acceptance; no model warmup inference."
+  },
+  "scheduling": {
+    "workspace_gib": 2.0,
+    "poll_seconds": 15,
+    "stable_seconds": 180
+  },
+  "conditions": [
+    {
+      "condition_id": "R06__gsm8k__receiver_only__full",
+      "model": "Qwen/Qwen3-0.6B",
+      "dataset": "gsm8k",
+      "protocol": "receiver_only",
+      "path": "direct_full"
+    },
+    {
+      "condition_id": "R06__hotpotqa__receiver_only__full",
+      "model": "Qwen/Qwen3-0.6B",
+      "dataset": "hotpotqa",
+      "protocol": "receiver_only",
+      "path": "direct_full"
+    },
+    {
+      "condition_id": "R06__humaneval__receiver_only__full",
+      "model": "Qwen/Qwen3-0.6B",
+      "dataset": "humaneval",
+      "protocol": "receiver_only",
+      "path": "direct_full"
+    },
+    {
+      "condition_id": "R17__gsm8k__receiver_only__full",
+      "model": "Qwen/Qwen3-1.7B",
+      "dataset": "gsm8k",
+      "protocol": "receiver_only",
+      "path": "direct_full"
+    },
+    {
+      "condition_id": "R17__hotpotqa__receiver_only__full",
+      "model": "Qwen/Qwen3-1.7B",
+      "dataset": "hotpotqa",
+      "protocol": "receiver_only",
+      "path": "direct_full"
+    },
+    {
+      "condition_id": "R17__humaneval__receiver_only__full",
+      "model": "Qwen/Qwen3-1.7B",
+      "dataset": "humaneval",
+      "protocol": "receiver_only",
+      "path": "direct_full"
+    },
+    {
+      "condition_id": "R40__gsm8k__receiver_only__full",
+      "model": "Qwen/Qwen3-4B",
+      "dataset": "gsm8k",
+      "protocol": "receiver_only",
+      "path": "direct_full"
+    },
+    {
+      "condition_id": "R40__hotpotqa__receiver_only__full",
+      "model": "Qwen/Qwen3-4B",
+      "dataset": "hotpotqa",
+      "protocol": "receiver_only",
+      "path": "direct_full"
+    },
+    {
+      "condition_id": "R40__humaneval__receiver_only__full",
+      "model": "Qwen/Qwen3-4B",
+      "dataset": "humaneval",
+      "protocol": "receiver_only",
+      "path": "direct_full"
+    }
+  ]
+}

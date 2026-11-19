@@ -6,7 +6,7 @@
 
 **[中文说明](README.md) | [English Description](README.en.md)**
 
-本仓库提供 T2T 文本通信基线的复现代码、最终冻结提示词和实验结果。在三组 Qwen3 Sender→Receiver 模型方向上，围绕数学推理、问答和代码生成任务开展24条件实验，统计原始及去格式后答案质量、通信字节量、分阶段推理时延与显存开销。评测采用 [GSM8K](https://github.com/openai/grade-school-math)、[HotpotQA](https://hotpotqa.github.io/) 和 [HumanEval](https://github.com/openai/human-eval)，共保留97,578条逐题实验指标。
+本仓库提供 T2T 文本通信基线的复现代码、最终冻结提示词和实验结果。在三组 Qwen3 Sender→Receiver 模型方向上，围绕数学推理、问答和代码生成任务开展24条件实验，统计原始及去格式后答案质量、通信字节量、分阶段推理时延与显存开销。评测采用 [GSM8K](https://github.com/openai/grade-school-math)、[HotpotQA](https://hotpotqa.github.io/) 和 [HumanEval](https://github.com/openai/human-eval)，通信实验保留97,578条逐题实验指标；另提供9条件、26,664条 receiver-only 单模型对照结果，两类实验共124,242条记录。
 
 ## 目录
 
@@ -65,6 +65,8 @@ Q 为原题或完整函数前缀，C 为完整证据，Cₛ/Cᵣ 为两端分持
 
 运行设置：单张 RTX 3090、双模型常驻、BF16/SDPA、batch 1、seed 42、关闭 thinking、贪心解码。完整协议及模板见[实验说明](docs/zh-CN/experiment.md)。
 
+独立单模型对照另外评测 Qwen3-0.6B、1.7B、4B，每模型覆盖三个任务，共 9 条件。数学输入 Q，问答输入 Q+C，代码输入原始函数前缀 Q；一次完整 Prefill，无 Sender，通信字节量为 0。同一任务共享 `receiver_only_v1` 提示词。单模型对照与上述 24 条通信条件分别配置和运行。
+
 ## 测试结果
 
 共24条件、97,578条记录；OOM与容量失败计入质量指标的固定分母并赋零分。HotpotQA 的跨协议表格采用共同7,345题。
@@ -82,6 +84,22 @@ Q 为原题或完整函数前缀，C 为完整证据，Cₛ/Cᵣ 为两端分持
 ![通信量与分阶段计算时延（算术均值）](docs/assets/tables/table_3_zh-CN.png)
 
 [原始汇总及置信区间](results/summary.csv)
+
+### Receiver-only 单模型对照
+
+9 条件、26,664 题次全部完成，OOM 与容量失败均为 0。以下三表使用 HotpotQA 共同 7,345 题；[完整精度汇总](results/receiver_only/summary.csv)同时保留全量 7,405 题统计。
+
+#### 表 R1. 原始评分与去格式后评分
+
+![Receiver-only — 原始评分与去格式后评分](docs/assets/tables/receiver_only_1_zh-CN.png)
+
+#### 表 R2. 计算时延（P50 / P95）
+
+![Receiver-only — 计算时延（P50 / P95）](docs/assets/tables/receiver_only_2_zh-CN.png)
+
+#### 表 R3. 计算时延（算术均值）
+
+![Receiver-only — 计算时延（算术均值）](docs/assets/tables/receiver_only_3_zh-CN.png)
 
 ## 快速开始
 
@@ -102,7 +120,7 @@ t2t-experiments --config configs/experiment.json run \
   --output /srv/t2t/runs/m1
 ```
 
-[完整安装、续跑与评分步骤](docs/zh-CN/usage.md)
+[完整安装、续跑与评分步骤](docs/zh-CN/usage.md) · [Receiver-only 复现](docs/zh-CN/receiver_only.md)
 
 ## 文档
 

@@ -43,3 +43,7 @@ Select GPUs externally with `CUDA_VISIBLE_DEVICES`, using a device index or GPU 
 ```bash
 CUDA_VISIBLE_DEVICES=3 t2t-experiments --config configs/experiment.json run --output /srv/t2t/runs/m1
 ```
+
+## Receiver-only single-model controls
+
+See [receiver-only reproduction](receiver_only.md) for the separate nine-condition config, inputs, commands, scoring, and results. The original 24 communication conditions are unchanged.

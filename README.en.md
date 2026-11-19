@@ -6,7 +6,7 @@
 
 **[中文说明](README.md) | [English Description](README.en.md)**
 
-This repository provides reproduction code, final frozen prompts, and results for a T2T text communication baseline. It evaluates 24 conditions across three Qwen3 Sender→Receiver model directions on mathematical reasoning, question answering, and code generation, reporting original and format-normalized answer quality, communication bytes, stage-level inference latency, and GPU memory usage. Evaluation uses [GSM8K](https://github.com/openai/grade-school-math), [HotpotQA](https://hotpotqa.github.io/), and [HumanEval](https://github.com/openai/human-eval), with 97,578 per-sample experiment records retained.
+This repository provides reproduction code, final frozen prompts, and results for a T2T text communication baseline. It evaluates 24 conditions across three Qwen3 Sender→Receiver model directions on mathematical reasoning, question answering, and code generation, reporting original and format-normalized answer quality, communication bytes, stage-level inference latency, and GPU memory usage. Evaluation uses [GSM8K](https://github.com/openai/grade-school-math), [HotpotQA](https://hotpotqa.github.io/), and [HumanEval](https://github.com/openai/human-eval), retaining 97,578 communication outcomes plus 26,664 receiver-only outcomes across nine additional single-model control conditions: 124,242 outcomes in total.
 
 ## Contents
 
@@ -65,6 +65,8 @@ Q is the original question or complete function prefix; C is the complete eviden
 
 Runtime setup: one RTX 3090, both models resident, BF16/SDPA, batch 1, seed 42, thinking disabled, and greedy decoding. See the [experiment guide](docs/en/experiment.md) for protocols and complete prompts.
 
+Independent single-model controls additionally evaluate Qwen3-0.6B, 1.7B, and 4B on all three tasks: nine conditions. Inputs are Q for mathematics, Q+C for QA, and the original function prefix Q for code. Each model uses one complete prefill, with no Sender and zero communication bytes. Each task shares the frozen `receiver_only_v1` prompt across models. These controls have a separate configuration from the 24 communication conditions.
+
 ## Results
 
 There are 24 conditions and 97,578 outcomes. OOM and capacity failures receive zero quality scores in fixed denominators. HotpotQA comparisons use the common 7,345-question subset.
@@ -82,6 +84,22 @@ There are 24 conditions and 97,578 outcomes. OOM and capacity failures receive z
 ![Communication and stage-level latency (arithmetic means)](docs/assets/tables/table_3_en.png)
 
 [Original summary and confidence intervals](results/summary.csv)
+
+### Receiver-only single-model controls
+
+All 26,664 outcomes across nine conditions are complete, with no OOM or capacity failures. The tables use the common 7,345 HotpotQA tasks; the [full-precision summary](results/receiver_only/summary.csv) also retains all 7,405 HotpotQA tasks.
+
+#### Table R1. Original and format-normalized scores
+
+![Receiver-only — Original and format-normalized scores](docs/assets/tables/receiver_only_1_en.png)
+
+#### Table R2. Compute latency (P50 / P95)
+
+![Receiver-only — Compute latency (P50 / P95)](docs/assets/tables/receiver_only_2_en.png)
+
+#### Table R3. Compute latency (arithmetic means)
+
+![Receiver-only — Compute latency (arithmetic means)](docs/assets/tables/receiver_only_3_en.png)
 
 ## Quick start
 
@@ -103,6 +121,8 @@ t2t-experiments --config configs/experiment.json run \
 ```
 
 [Full installation, resume, and scoring instructions](docs/en/usage.md)
+
+[Receiver-only reproduction](docs/en/receiver_only.md)
 
 ## Documentation
 

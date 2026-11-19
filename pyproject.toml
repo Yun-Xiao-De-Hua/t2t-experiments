@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "t2t-experiments"
 version = "0.1.0"
-description = "Reproduction of a 24-condition text communication baseline"
+description = "Reproducible text communication and single-model receiver baselines"
 readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.11,<3.12"
@@ -15,5 +15,5 @@ dependencies = ["torch==2.8.0", "transformers==4.57.6", "tokenizers==0.22.2", "n
 t2t-experiments = "t2t_experiments.cli:main"
 
 [tool.setuptools]
-packages = ["t2t_experiments"]
+packages = ["t2t_experiments", "t2t_experiments.receiver_only"]
 package-dir = {t2t_experiments = "src"}

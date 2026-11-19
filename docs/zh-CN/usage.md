@@ -43,3 +43,7 @@ t2t-experiments --config /path/to/t2t_experiments/configs/experiment.json score 
 ```bash
 CUDA_VISIBLE_DEVICES=3 t2t-experiments --config configs/experiment.json run --output /srv/t2t/runs/m1
 ```
+
+## Receiver-only 单模型对照
+
+独立的 9 条件配置、单模型输入、运行/评分命令与结果口径见 [Receiver-only 复现](receiver_only.md)。原有 24 条通信条件保持不变。

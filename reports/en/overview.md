@@ -34,3 +34,23 @@ Complete coverage does not mean every sample generated normally. OOM/capacity fa
 These are descriptive comparisons for the tested model pairs, templates and datasets; no new significance tests were performed.
 
 [Original summary and confidence intervals](../../results/summary.csv)
+
+## 4. Receiver-only single-model controls
+
+Independent single-model controls additionally evaluate Qwen3-0.6B, 1.7B, and 4B on all three tasks: nine conditions. Inputs are Q for mathematics, Q+C for QA, and the original function prefix Q for code. Each model uses one complete prefill, with no Sender and zero communication bytes. Each task shares the frozen `receiver_only_v1` prompt across models. These controls have a separate configuration from the 24 communication conditions.
+
+All 26,664 outcomes completed without OOM or capacity failures. Tables use common HotpotQA 7,345; the [separate summary](../../results/receiver_only/summary.csv) also retains all 7,405 tasks.
+
+### Table R1. Original and format-normalized scores
+
+![Receiver-only — Original and format-normalized scores](../../docs/assets/tables/receiver_only_1_en.png)
+
+### Table R2. Compute latency (P50 / P95)
+
+![Receiver-only — Compute latency (P50 / P95)](../../docs/assets/tables/receiver_only_2_en.png)
+
+### Table R3. Compute latency (arithmetic means)
+
+![Receiver-only — Compute latency (arithmetic means)](../../docs/assets/tables/receiver_only_3_en.png)
+
+[Reproduction, scoring, and comparison scope](../../docs/en/receiver_only.md). M1/M2/M3 map to R17/R40/R06; full/split prefill and single/dual-model memory scopes differ.
