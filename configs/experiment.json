@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "models_file": "models.json",
+  "prompts_file": "prompts.json",
+  "paths_file": "paths.local.json",
+  "conditions": [
+    {
+      "condition_id": "M1__gsm8k__P1__generated",
+      "dataset": "gsm8k",
+      "pair": "M1",
+      "path": "generated",
+      "protocol": "P1"
+    },
+    {
+      "condition_id": "M1__gsm8k__P4__sender_restated_q",
+      "dataset": "gsm8k",
+      "pair": "M1",
+      "path": "sender_restated_q",
+      "protocol": "P4"
+    },
+    {
+      "condition_id": "M1__hotpotqa__P1__generated",
+      "dataset": "hotpotqa",
+      "pair": "M1",
+      "path": "generated",
+      "protocol": "P1"
+    },
+    {
+      "condition_id": "M1__hotpotqa__P2__generated",
+      "dataset": "hotpotqa",
+      "pair": "M1",
+      "path": "generated",
+      "protocol": "P2"
+    },
+    {
+      "condition_id": "M1__hotpotqa__P3__generated",
+      "dataset": "hotpotqa",
+      "pair": "M1",
+      "path": "generated",
+      "protocol": "P3"
+    },
+    {
+      "condition_id": "M1__hotpotqa__P4__sender_restated_q",
+      "dataset": "hotpotqa",
+      "pair": "M1",
+      "path": "sender_restated_q",
+      "protocol": "P4"
+    },
+    {
+      "condition_id": "M1__humaneval__P1__generated",
+      "dataset": "humaneval",
+      "pair": "M1",
+      "path": "generated",
+      "protocol": "P1"
+    },
+    {
+      "condition_id": "M1__humaneval__P4__sender_restated_q",
+      "dataset": "humaneval",
+      "pair": "M1",
+      "path": "sender_restated_q",
+      "protocol": "P4"
+    },
+    {
+      "condition_id": "M2__gsm8k__P1__generated",
+      "dataset": "gsm8k",
+      "pair": "M2",
+      "path": "generated",
+      "protocol": "P1"
+    },
+    {
+      "condition_id": "M2__gsm8k__P4__sender_restated_q",
+      "dataset": "gsm8k",
+      "pair": "M2",
+      "path": "sender_restated_q",
+      "protocol": "P4"
+    },
+    {
+      "condition_id": "M2__hotpotqa__P1__generated",
+      "dataset": "hotpotqa",
+      "pair": "M2",
+      "path": "generated",
+      "protocol": "P1"
+    },
+    {
+      "condition_id": "M2__hotpotqa__P2__generated",
+      "dataset": "hotpotqa",
+      "pair": "M2",
+      "path": "generated",
+      "protocol": "P2"
+    },
+    {
+      "condition_id": "M2__hotpotqa__P3__generated",
+      "dataset": "hotpotqa",
+      "pair": "M2",
+      "path": "generated",
+      "protocol": "P3"
+    },
+    {
+      "condition_id": "M2__hotpotqa__P4__sender_restated_q",
+      "dataset": "hotpotqa",
+      "pair": "M2",
+      "path": "sender_restated_q",
+      "protocol": "P4"
+    },
+    {
+      "condition_id": "M2__humaneval__P1__generated",
+      "dataset": "humaneval",
+      "pair": "M2",
+      "path": "generated",
+      "protocol": "P1"
+    },
+    {
+      "condition_id": "M2__humaneval__P4__sender_restated_q",
+      "dataset": "humaneval",
+      "pair": "M2",
+      "path": "sender_restated_q",
+      "protocol": "P4"
+    },
+    {
+      "condition_id": "M3__gsm8k__P1__generated",
+      "dataset": "gsm8k",
+      "pair": "M3",
+      "path": "generated",
+      "protocol": "P1"
+    },
+    {
+      "condition_id": "M3__gsm8k__P4__sender_restated_q",
+      "dataset": "gsm8k",
+      "pair": "M3",
+      "path": "sender_restated_q",
+      "protocol": "P4"
+    },
+    {
+      "condition_id": "M3__hotpotqa__P1__generated",
+      "dataset": "hotpotqa",
+      "pair": "M3",
+      "path": "generated",
+      "protocol": "P1"
+    },
+    {
+      "condition_id": "M3__hotpotqa__P2__generated",
+      "dataset": "hotpotqa",
+      "pair": "M3",
+      "path": "generated",
+      "protocol": "P2"
+    },
+    {
+      "condition_id": "M3__hotpotqa__P3__generated",
+      "dataset": "hotpotqa",
+      "pair": "M3",
+      "path": "generated",
+      "protocol": "P3"
+    },
+    {
+      "condition_id": "M3__hotpotqa__P4__sender_restated_q",
+      "dataset": "hotpotqa",
+      "pair": "M3",
+      "path": "sender_restated_q",
+      "protocol": "P4"
+    },
+    {
+      "condition_id": "M3__humaneval__P1__generated",
+      "dataset": "humaneval",
+      "pair": "M3",
+      "path": "generated",
+      "protocol": "P1"
+    },
+    {
+      "condition_id": "M3__humaneval__P4__sender_restated_q",
+      "dataset": "humaneval",
+      "pair": "M3",
+      "path": "sender_restated_q",
+      "protocol": "P4"
+    }
+  ],
+  "datasets": {
+    "gsm8k": {
+      "configuration": "main",
+      "upstream_split": "test",
+      "project_role": "test",
+      "records": 1319,
+      "revision": "3101c7d5072418e28b9008a6636bde82a006892c",
+      "metric": "final_answer_accuracy",
+      "model_input_fields": [
+        "question"
+      ],
+      "held_out_fields": [
+        "answer"
+      ]
+    },
+    "hotpotqa": {
+      "configuration": "distractor_v1",
+      "upstream_split": "validation",
+      "project_role": "test",
+      "records": 7405,
+      "revision": "1908d6afbbead072334abe2965f91bd2709910ab",
+      "metric": [
+        "answer_em",
+        "answer_f1"
+      ],
+      "model_input_fields": [
+        "question",
+        "context"
+      ],
+      "held_out_fields": [
+        "answer"
+      ]
+    },
+    "humaneval": {
+      "configuration": "original",
+      "upstream_split": "test",
+      "project_role": "test",
+      "records": 164,
+      "revision": "6d43fb980f9fee3c892a914eda09951f772ad10d",
+      "metric": "pass@1",
+      "model_input_fields": [
+        "prompt"
+      ],
+      "held_out_fields": [
+        "canonical_solution",
+        "test",
+        "entry_point"
+      ]
+    }
+  },
+  "runtime": {
+    "seed": 42,
+    "precision": "bfloat16",
+    "attention": "sdpa",
+    "batch_size": 1,
+    "cpu_threads": 2,
+    "warmup_per_condition": 3,
+    "reserve_bytes": 536870912
+  },
+  "scheduling": {
+    "minimum_free_gib": {
+      "M1": 6.0,
+      "M2": 10.5,
+      "M3": 10.5
+    },
+    "poll_seconds": 15,
+    "stable_seconds": 180
+  }
+}

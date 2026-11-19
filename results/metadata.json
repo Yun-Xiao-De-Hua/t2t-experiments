@@ -1,0 +1,2463 @@
+{
+  "schema_version": 1,
+  "representation": "seven_category_non_text_metrics",
+  "original_prompt_sha256": "77617d277579482654862bec25bfebbcc9789fc014cb6bd3ab2eb6cd9a962b98",
+  "packaged_prompts_sha256": "7cf8e435d5c4f89eb56ef8c9d78abe3fe83ed92bee98e504e7a3b0443ff9fe6e",
+  "assembly_version": "t2t_generated_only_v1",
+  "units": {
+    "*_s": "seconds",
+    "*bytes*": "bytes",
+    "*tokens*": "token counts",
+    "scores": "fraction in [0,1]"
+  },
+  "missing_values": "null means unknown or not completed; never replaced with zero",
+  "failure_scoring": "OOM and capacity failures receive zero quality score in fixed denominators",
+  "views": "HotpotQA full=7405; common_7345=7345; P2 uses common only",
+  "configurations": {
+    "ed861ab9e9a5e571": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M1__gsm8k__P1__generated",
+        "pair": "M1",
+        "dataset": "gsm8k",
+        "protocol": "P1",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "source_manifest_sha256": "e1883db1c1e06dff82ff9c64fc0c7669ad4aab48024c90873a4133c0ae676a73",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "deda97f1a49c76be": {
+      "seed": 42,
+      "condition": {
+        "condition_id": "M1__gsm8k__P1__generated",
+        "pair": "M1",
+        "dataset": "gsm8k",
+        "protocol": "P1",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "source_manifest_sha256": "e1883db1c1e06dff82ff9c64fc0c7669ad4aab48024c90873a4133c0ae676a73",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "7c8c7bf01e23fb44": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M1__gsm8k__P4__sender_restated_q",
+        "pair": "M1",
+        "dataset": "gsm8k",
+        "protocol": "P4",
+        "path": "sender_restated_q"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "source_manifest_sha256": "e1883db1c1e06dff82ff9c64fc0c7669ad4aab48024c90873a4133c0ae676a73",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "292ffb74a9a4da03": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M1__hotpotqa__P1__generated",
+        "pair": "M1",
+        "dataset": "hotpotqa",
+        "protocol": "P1",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "source_manifest_sha256": "e1883db1c1e06dff82ff9c64fc0c7669ad4aab48024c90873a4133c0ae676a73",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "6d5a80ad989bdd0b": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M1__hotpotqa__P2__generated",
+        "pair": "M1",
+        "dataset": "hotpotqa",
+        "protocol": "P2",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "source_manifest_sha256": "e1883db1c1e06dff82ff9c64fc0c7669ad4aab48024c90873a4133c0ae676a73",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "983c3d387d0231ec": {
+      "seed": 42,
+      "condition": {
+        "condition_id": "M1__hotpotqa__P2__generated",
+        "pair": "M1",
+        "dataset": "hotpotqa",
+        "protocol": "P2",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "source_manifest_sha256": "e1883db1c1e06dff82ff9c64fc0c7669ad4aab48024c90873a4133c0ae676a73",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "32fd1a47f0620046": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M1__hotpotqa__P3__generated",
+        "pair": "M1",
+        "dataset": "hotpotqa",
+        "protocol": "P3",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "source_manifest_sha256": "e1883db1c1e06dff82ff9c64fc0c7669ad4aab48024c90873a4133c0ae676a73",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "d6ee8b915edd5830": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M1__hotpotqa__P4__sender_restated_q",
+        "pair": "M1",
+        "dataset": "hotpotqa",
+        "protocol": "P4",
+        "path": "sender_restated_q"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "source_manifest_sha256": "e1883db1c1e06dff82ff9c64fc0c7669ad4aab48024c90873a4133c0ae676a73",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "d4cc512576fdbb77": {
+      "seed": 42,
+      "condition": {
+        "condition_id": "M1__hotpotqa__P4__sender_restated_q",
+        "pair": "M1",
+        "dataset": "hotpotqa",
+        "protocol": "P4",
+        "path": "sender_restated_q"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "source_manifest_sha256": "e1883db1c1e06dff82ff9c64fc0c7669ad4aab48024c90873a4133c0ae676a73",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "c5f2265ccb463489": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M1__humaneval__P1__generated",
+        "pair": "M1",
+        "dataset": "humaneval",
+        "protocol": "P1",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "source_manifest_sha256": "e1883db1c1e06dff82ff9c64fc0c7669ad4aab48024c90873a4133c0ae676a73",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "dc316da29e72bb77": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M1__humaneval__P4__sender_restated_q",
+        "pair": "M1",
+        "dataset": "humaneval",
+        "protocol": "P4",
+        "path": "sender_restated_q"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-1.7B",
+          "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+          "source_manifest_sha256": "e1883db1c1e06dff82ff9c64fc0c7669ad4aab48024c90873a4133c0ae676a73",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "26dc927eedf634ad": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M2__gsm8k__P1__generated",
+        "pair": "M2",
+        "dataset": "gsm8k",
+        "protocol": "P1",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "bb96eb8d6051c111": {
+      "seed": 42,
+      "condition": {
+        "condition_id": "M2__gsm8k__P1__generated",
+        "pair": "M2",
+        "dataset": "gsm8k",
+        "protocol": "P1",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "603e639c779dd442": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M2__gsm8k__P4__sender_restated_q",
+        "pair": "M2",
+        "dataset": "gsm8k",
+        "protocol": "P4",
+        "path": "sender_restated_q"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "d607d06988bb3d45": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M2__hotpotqa__P1__generated",
+        "pair": "M2",
+        "dataset": "hotpotqa",
+        "protocol": "P1",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "2c1055050f6584a6": {
+      "seed": 42,
+      "condition": {
+        "condition_id": "M2__hotpotqa__P1__generated",
+        "pair": "M2",
+        "dataset": "hotpotqa",
+        "protocol": "P1",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "fd5f95b454047e75": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M2__hotpotqa__P2__generated",
+        "pair": "M2",
+        "dataset": "hotpotqa",
+        "protocol": "P2",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "551540b969bd3202": {
+      "seed": 42,
+      "condition": {
+        "condition_id": "M2__hotpotqa__P2__generated",
+        "pair": "M2",
+        "dataset": "hotpotqa",
+        "protocol": "P2",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "915976e47a90393d": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M2__hotpotqa__P3__generated",
+        "pair": "M2",
+        "dataset": "hotpotqa",
+        "protocol": "P3",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "a57c986f9cb7fd14": {
+      "seed": 42,
+      "condition": {
+        "condition_id": "M2__hotpotqa__P3__generated",
+        "pair": "M2",
+        "dataset": "hotpotqa",
+        "protocol": "P3",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "9a97b35172cedab0": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M2__hotpotqa__P4__sender_restated_q",
+        "pair": "M2",
+        "dataset": "hotpotqa",
+        "protocol": "P4",
+        "path": "sender_restated_q"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "30de91eef732f402": {
+      "seed": 42,
+      "condition": {
+        "condition_id": "M2__hotpotqa__P4__sender_restated_q",
+        "pair": "M2",
+        "dataset": "hotpotqa",
+        "protocol": "P4",
+        "path": "sender_restated_q"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "a8711cca7acce378": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M2__humaneval__P1__generated",
+        "pair": "M2",
+        "dataset": "humaneval",
+        "protocol": "P1",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "531e791dadd3f53f": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M2__humaneval__P4__sender_restated_q",
+        "pair": "M2",
+        "dataset": "humaneval",
+        "protocol": "P4",
+        "path": "sender_restated_q"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "63c8ad8e1e2066ce": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M3__gsm8k__P1__generated",
+        "pair": "M3",
+        "dataset": "gsm8k",
+        "protocol": "P1",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "41f618ac79d4c983": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M3__gsm8k__P4__sender_restated_q",
+        "pair": "M3",
+        "dataset": "gsm8k",
+        "protocol": "P4",
+        "path": "sender_restated_q"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "34da04bcbdb60155": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M3__hotpotqa__P1__generated",
+        "pair": "M3",
+        "dataset": "hotpotqa",
+        "protocol": "P1",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "7d96616713975b7c": {
+      "seed": 42,
+      "condition": {
+        "condition_id": "M3__hotpotqa__P1__generated",
+        "pair": "M3",
+        "dataset": "hotpotqa",
+        "protocol": "P1",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "6a9bc758bf53c718": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M3__hotpotqa__P2__generated",
+        "pair": "M3",
+        "dataset": "hotpotqa",
+        "protocol": "P2",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "17b5b41b3767c616": {
+      "seed": 42,
+      "condition": {
+        "condition_id": "M3__hotpotqa__P2__generated",
+        "pair": "M3",
+        "dataset": "hotpotqa",
+        "protocol": "P2",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "8791f9f5a9f5ef58": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M3__hotpotqa__P3__generated",
+        "pair": "M3",
+        "dataset": "hotpotqa",
+        "protocol": "P3",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "0db43b363214af58": {
+      "seed": 42,
+      "condition": {
+        "condition_id": "M3__hotpotqa__P3__generated",
+        "pair": "M3",
+        "dataset": "hotpotqa",
+        "protocol": "P3",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "df6367582600fa36": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M3__hotpotqa__P4__sender_restated_q",
+        "pair": "M3",
+        "dataset": "hotpotqa",
+        "protocol": "P4",
+        "path": "sender_restated_q"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "f33d8e4d6b2f8c7c": {
+      "seed": 42,
+      "condition": {
+        "condition_id": "M3__hotpotqa__P4__sender_restated_q",
+        "pair": "M3",
+        "dataset": "hotpotqa",
+        "protocol": "P4",
+        "path": "sender_restated_q"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "877d1341b47a0470": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M3__humaneval__P1__generated",
+        "pair": "M3",
+        "dataset": "humaneval",
+        "protocol": "P1",
+        "path": "generated"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    },
+    "0718c8d00408028a": {
+      "generation": {
+        "receiver": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        },
+        "sender": {
+          "backend": "sdpa",
+          "batch_size": 1,
+          "decode": "manual_greedy_argmax_no_logits_processors",
+          "do_sample": false,
+          "enable_thinking": false,
+          "eos_token_id": [
+            151645,
+            151643
+          ],
+          "max_new_tokens": "remaining_actual_context_capacity",
+          "num_beams": 1,
+          "precision": "bfloat16",
+          "seed": 42,
+          "temperature": null,
+          "top_k": null,
+          "top_p": null,
+          "use_cache": true
+        }
+      },
+      "seed": 42,
+      "no_added_training": true,
+      "assembly_version": "t2t_generated_only_v1",
+      "condition": {
+        "condition_id": "M3__humaneval__P4__sender_restated_q",
+        "pair": "M3",
+        "dataset": "humaneval",
+        "protocol": "P4",
+        "path": "sender_restated_q"
+      },
+      "models": {
+        "receiver": {
+          "repo_id": "Qwen/Qwen3-0.6B",
+          "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "source_manifest_sha256": "616c01f645cf5bcbed7e8aaf550dc31c2f5873a5ceb59dd09938ffb8f73f68f2",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        },
+        "sender": {
+          "repo_id": "Qwen/Qwen3-4B",
+          "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "source_manifest_sha256": "605463af93ff3396ef089369cffa0613cf918e13f023a4bdf8a68ec491c8a027",
+          "tokenizer_config_sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+        }
+      }
+    }
+  },
+  "module_parameters": {
+    "4c55f8892cb51a96": {
+      "base_models": {
+        "receiver": {
+          "actual_unique_parameters": 1720574976,
+          "allocated_after_load": 4634590208,
+          "bf16_weight_bytes_estimate": 3441149952,
+          "checkpoint_tensor_payload_bytes": 4063479808,
+          "load_wall_s": 1.6083330840338022,
+          "reserved_after_load": 5278531584,
+          "stored_tensor_elements": 2031739904,
+          "unique_parameter_estimate": 1720574976
+        },
+        "sender": {
+          "actual_unique_parameters": 596049920,
+          "allocated_after_load": 1192638976,
+          "bf16_weight_bytes_estimate": 1192099840,
+          "checkpoint_tensor_payload_bytes": 1503264768,
+          "load_wall_s": 0.9869429930113256,
+          "reserved_after_load": 1509949440,
+          "stored_tensor_elements": 751632384,
+          "unique_parameter_estimate": 596049920
+        }
+      },
+      "communication_modules": {
+        "conversion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "fusion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "pooling": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "projection": {
+          "deployed": false,
+          "parameters": 0
+        }
+      }
+    },
+    "83ffb8e5ee77b4b8": {
+      "status": "not_completed"
+    },
+    "25be9d66f3262168": {
+      "base_models": {
+        "receiver": {
+          "actual_unique_parameters": 1720574976,
+          "allocated_after_load": 4634590208,
+          "bf16_weight_bytes_estimate": 3441149952,
+          "checkpoint_tensor_payload_bytes": 4063479808,
+          "load_wall_s": 7.236438903957605,
+          "reserved_after_load": 5278531584,
+          "stored_tensor_elements": 2031739904,
+          "unique_parameter_estimate": 1720574976
+        },
+        "sender": {
+          "actual_unique_parameters": 596049920,
+          "allocated_after_load": 1192638976,
+          "bf16_weight_bytes_estimate": 1192099840,
+          "checkpoint_tensor_payload_bytes": 1503264768,
+          "load_wall_s": 7.336111583048478,
+          "reserved_after_load": 1509949440,
+          "stored_tensor_elements": 751632384,
+          "unique_parameter_estimate": 596049920
+        }
+      },
+      "communication_modules": {
+        "conversion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "fusion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "pooling": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "projection": {
+          "deployed": false,
+          "parameters": 0
+        }
+      }
+    },
+    "1342768f7cad0be4": {
+      "base_models": {
+        "receiver": {
+          "actual_unique_parameters": 1720574976,
+          "allocated_after_load": 4634590208,
+          "bf16_weight_bytes_estimate": 3441149952,
+          "checkpoint_tensor_payload_bytes": 4063479808,
+          "load_wall_s": 1.733324977999473,
+          "reserved_after_load": 5278531584,
+          "stored_tensor_elements": 2031739904,
+          "unique_parameter_estimate": 1720574976
+        },
+        "sender": {
+          "actual_unique_parameters": 596049920,
+          "allocated_after_load": 1192638976,
+          "bf16_weight_bytes_estimate": 1192099840,
+          "checkpoint_tensor_payload_bytes": 1503264768,
+          "load_wall_s": 3.9528537699998196,
+          "reserved_after_load": 1509949440,
+          "stored_tensor_elements": 751632384,
+          "unique_parameter_estimate": 596049920
+        }
+      },
+      "communication_modules": {
+        "conversion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "fusion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "pooling": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "projection": {
+          "deployed": false,
+          "parameters": 0
+        }
+      }
+    },
+    "9b9d0e8a1f744fbc": {
+      "base_models": {
+        "receiver": {
+          "actual_unique_parameters": 1720574976,
+          "allocated_after_load": 4634590208,
+          "bf16_weight_bytes_estimate": 3441149952,
+          "checkpoint_tensor_payload_bytes": 4063479808,
+          "load_wall_s": 17.504154780996032,
+          "reserved_after_load": 5278531584,
+          "stored_tensor_elements": 2031739904,
+          "unique_parameter_estimate": 1720574976
+        },
+        "sender": {
+          "actual_unique_parameters": 596049920,
+          "allocated_after_load": 1192638976,
+          "bf16_weight_bytes_estimate": 1192099840,
+          "checkpoint_tensor_payload_bytes": 1503264768,
+          "load_wall_s": 1.4029560879571363,
+          "reserved_after_load": 1509949440,
+          "stored_tensor_elements": 751632384,
+          "unique_parameter_estimate": 596049920
+        }
+      },
+      "communication_modules": {
+        "conversion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "fusion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "pooling": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "projection": {
+          "deployed": false,
+          "parameters": 0
+        }
+      }
+    },
+    "489857ded4293336": {
+      "base_models": {
+        "receiver": {
+          "actual_unique_parameters": 1720574976,
+          "allocated_after_load": 4634590208,
+          "bf16_weight_bytes_estimate": 3441149952,
+          "checkpoint_tensor_payload_bytes": 4063479808,
+          "load_wall_s": 1.734694190992741,
+          "reserved_after_load": 5278531584,
+          "stored_tensor_elements": 2031739904,
+          "unique_parameter_estimate": 1720574976
+        },
+        "sender": {
+          "actual_unique_parameters": 596049920,
+          "allocated_after_load": 1192638976,
+          "bf16_weight_bytes_estimate": 1192099840,
+          "checkpoint_tensor_payload_bytes": 1503264768,
+          "load_wall_s": 1.1108297040045727,
+          "reserved_after_load": 1509949440,
+          "stored_tensor_elements": 751632384,
+          "unique_parameter_estimate": 596049920
+        }
+      },
+      "communication_modules": {
+        "conversion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "fusion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "pooling": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "projection": {
+          "deployed": false,
+          "parameters": 0
+        }
+      }
+    },
+    "acbb4ca3a8baf89b": {
+      "base_models": {
+        "receiver": {
+          "actual_unique_parameters": 4022468096,
+          "allocated_after_load": 9238118400,
+          "bf16_weight_bytes_estimate": 8044936192,
+          "checkpoint_tensor_payload_bytes": 8044936192,
+          "load_wall_s": 2.718981132013141,
+          "reserved_after_load": 9288286208,
+          "stored_tensor_elements": 4022468096,
+          "unique_parameter_estimate": 4022468096
+        },
+        "sender": {
+          "actual_unique_parameters": 596049920,
+          "allocated_after_load": 1192638976,
+          "bf16_weight_bytes_estimate": 1192099840,
+          "checkpoint_tensor_payload_bytes": 1503264768,
+          "load_wall_s": 1.076962906998233,
+          "reserved_after_load": 1509949440,
+          "stored_tensor_elements": 751632384,
+          "unique_parameter_estimate": 596049920
+        }
+      },
+      "communication_modules": {
+        "conversion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "fusion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "pooling": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "projection": {
+          "deployed": false,
+          "parameters": 0
+        }
+      }
+    },
+    "f2d53b19444deb19": {
+      "base_models": {
+        "receiver": {
+          "actual_unique_parameters": 4022468096,
+          "allocated_after_load": 9238118400,
+          "bf16_weight_bytes_estimate": 8044936192,
+          "checkpoint_tensor_payload_bytes": 8044936192,
+          "load_wall_s": 37.36425357405096,
+          "reserved_after_load": 9288286208,
+          "stored_tensor_elements": 4022468096,
+          "unique_parameter_estimate": 4022468096
+        },
+        "sender": {
+          "actual_unique_parameters": 596049920,
+          "allocated_after_load": 1192638976,
+          "bf16_weight_bytes_estimate": 1192099840,
+          "checkpoint_tensor_payload_bytes": 1503264768,
+          "load_wall_s": 1.3007433470338583,
+          "reserved_after_load": 1509949440,
+          "stored_tensor_elements": 751632384,
+          "unique_parameter_estimate": 596049920
+        }
+      },
+      "communication_modules": {
+        "conversion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "fusion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "pooling": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "projection": {
+          "deployed": false,
+          "parameters": 0
+        }
+      }
+    },
+    "5270be60178bd6a1": {
+      "communication_modules": {
+        "conversion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "fusion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "pooling": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "projection": {
+          "deployed": false,
+          "parameters": 0
+        }
+      }
+    },
+    "d29c68730a5f355b": {
+      "base_models": {
+        "receiver": {
+          "actual_unique_parameters": 596049920,
+          "allocated_after_load": 9237725184,
+          "bf16_weight_bytes_estimate": 1192099840,
+          "checkpoint_tensor_payload_bytes": 1503264768,
+          "load_wall_s": 9.254963718994986,
+          "reserved_after_load": 9552527360,
+          "stored_tensor_elements": 751632384,
+          "unique_parameter_estimate": 596049920
+        },
+        "sender": {
+          "actual_unique_parameters": 4022468096,
+          "allocated_after_load": 8044955136,
+          "bf16_weight_bytes_estimate": 8044936192,
+          "checkpoint_tensor_payload_bytes": 8044936192,
+          "load_wall_s": 33.95792244098266,
+          "reserved_after_load": 8048869376,
+          "stored_tensor_elements": 4022468096,
+          "unique_parameter_estimate": 4022468096
+        }
+      },
+      "communication_modules": {
+        "conversion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "fusion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "pooling": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "projection": {
+          "deployed": false,
+          "parameters": 0
+        }
+      }
+    },
+    "dd30063f1d3061d6": {
+      "base_models": {
+        "receiver": {
+          "actual_unique_parameters": 596049920,
+          "allocated_after_load": 9237725184,
+          "bf16_weight_bytes_estimate": 1192099840,
+          "checkpoint_tensor_payload_bytes": 1503264768,
+          "load_wall_s": 6.472138546989299,
+          "reserved_after_load": 9552527360,
+          "stored_tensor_elements": 751632384,
+          "unique_parameter_estimate": 596049920
+        },
+        "sender": {
+          "actual_unique_parameters": 4022468096,
+          "allocated_after_load": 8044955136,
+          "bf16_weight_bytes_estimate": 8044936192,
+          "checkpoint_tensor_payload_bytes": 8044936192,
+          "load_wall_s": 32.63112687401008,
+          "reserved_after_load": 8048869376,
+          "stored_tensor_elements": 4022468096,
+          "unique_parameter_estimate": 4022468096
+        }
+      },
+      "communication_modules": {
+        "conversion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "fusion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "pooling": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "projection": {
+          "deployed": false,
+          "parameters": 0
+        }
+      }
+    },
+    "bcda9d03fd3864d4": {
+      "base_models": {
+        "receiver": {
+          "actual_unique_parameters": 596049920,
+          "allocated_after_load": 9237725184,
+          "bf16_weight_bytes_estimate": 1192099840,
+          "checkpoint_tensor_payload_bytes": 1503264768,
+          "load_wall_s": 8.914470690011512,
+          "reserved_after_load": 9552527360,
+          "stored_tensor_elements": 751632384,
+          "unique_parameter_estimate": 596049920
+        },
+        "sender": {
+          "actual_unique_parameters": 4022468096,
+          "allocated_after_load": 8044955136,
+          "bf16_weight_bytes_estimate": 8044936192,
+          "checkpoint_tensor_payload_bytes": 8044936192,
+          "load_wall_s": 36.891281018033624,
+          "reserved_after_load": 8048869376,
+          "stored_tensor_elements": 4022468096,
+          "unique_parameter_estimate": 4022468096
+        }
+      },
+      "communication_modules": {
+        "conversion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "fusion": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "pooling": {
+          "deployed": false,
+          "parameters": 0
+        },
+        "projection": {
+          "deployed": false,
+          "parameters": 0
+        }
+      }
+    }
+  },
+  "environments": {
+    "a091ba1b727e5c57": {
+      "gpu_name": "NVIDIA GeForce RTX 3090",
+      "cuda_runtime": "12.8",
+      "precision": "bfloat16",
+      "backend": "sdpa",
+      "threads": 2,
+      "batch_size": 1,
+      "versions": {
+        "tokenizers": "0.22.2",
+        "torch": "2.8.0+cu128",
+        "transformers": "4.57.6"
+      },
+      "timing": "CUDA Event plus synchronized wall; decode includes greedy control and subsequent cached forwards",
+      "warmup_samples_per_condition": 3,
+      "python": "3.11.17"
+    }
+  },
+  "condition_samples": {
+    "M1__gsm8k__P1__generated": 1319,
+    "M1__gsm8k__P4__sender_restated_q": 1319,
+    "M1__hotpotqa__P1__generated": 7405,
+    "M1__hotpotqa__P2__generated": 7345,
+    "M1__hotpotqa__P3__generated": 7405,
+    "M1__hotpotqa__P4__sender_restated_q": 7405,
+    "M1__humaneval__P1__generated": 164,
+    "M1__humaneval__P4__sender_restated_q": 164,
+    "M2__gsm8k__P1__generated": 1319,
+    "M2__gsm8k__P4__sender_restated_q": 1319,
+    "M2__hotpotqa__P1__generated": 7405,
+    "M2__hotpotqa__P2__generated": 7345,
+    "M2__hotpotqa__P3__generated": 7405,
+    "M2__hotpotqa__P4__sender_restated_q": 7405,
+    "M2__humaneval__P1__generated": 164,
+    "M2__humaneval__P4__sender_restated_q": 164,
+    "M3__gsm8k__P1__generated": 1319,
+    "M3__gsm8k__P4__sender_restated_q": 1319,
+    "M3__hotpotqa__P1__generated": 7405,
+    "M3__hotpotqa__P2__generated": 7345,
+    "M3__hotpotqa__P3__generated": 7405,
+    "M3__hotpotqa__P4__sender_restated_q": 7405,
+    "M3__humaneval__P1__generated": 164,
+    "M3__humaneval__P4__sender_restated_q": 164
+  },
+  "field_notes": {
+    "configuration_ref": "key in configurations; includes condition, seed, models, generation",
+    "module_parameters_ref": "key in module_parameters; base weights and zero-parameter communication modules",
+    "environment_ref": "key in environments; null if unavailable",
+    "common_7345": "sample is eligible for HotpotQA P2; false for other datasets",
+    "generation_status": "generated_pending_offline_scoring is the original successful generation status; scores are already present",
+    "partial_result": "only saved numeric/structured measurements from interrupted stages; not completed output",
+    "memory": "baseline/peak allocated/reserved bytes for both models plus active KV/workspace",
+    "communication": "serialized_payload_bytes includes envelope/metadata/escaping; Receiver prompt includes generated_text only",
+    "missing_keys": "source did not record a measurement; not a measured zero",
+    "timings": "per-stage CUDA event seconds and synchronized wall seconds; preserve original measurement scopes"
+  }
+}

@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+configs/paths.local.json
+configs/*.paths.local.json
+*.log
+.pytest_cache/
+# Models, datasets and run artifacts must be outside this repository.
+models/
+datasets/
+runs/

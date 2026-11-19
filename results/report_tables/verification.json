@@ -1,0 +1,15 @@
+{
+  "all_matched": true,
+  "conditions": 24,
+  "numeric_comparisons": 504,
+  "comparisons_per_table": {
+    "1": 72,
+    "2": 288,
+    "3": 144
+  },
+  "criterion": "within half of the last displayed decimal unit",
+  "pdf_sha256": "e09728a0dd4040099272f4871df21a4555cc51860565d3cd1e89289e10f2b52e",
+  "scoring_script_sha256": "e15f1fbce64a1c45bfa0e029cdd6761d76a9c6c1ff924c83f5e2df53bf7b0869",
+  "snapshot_time": "2026-11-18T21:55:02+08:00",
+  "mismatches": []
+}

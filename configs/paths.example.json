@@ -1,0 +1,19 @@
+{
+  "models": {
+    "Qwen/Qwen3-0.6B": "/srv/t2t/models/Qwen3-0.6B",
+    "Qwen/Qwen3-1.7B": "/srv/t2t/models/Qwen3-1.7B",
+    "Qwen/Qwen3-4B": "/srv/t2t/models/Qwen3-4B"
+  },
+  "datasets": {
+    "gsm8k": "/srv/t2t/datasets/gsm8k.jsonl",
+    "hotpotqa": "/srv/t2t/datasets/hotpotqa.jsonl",
+    "humaneval": "/srv/t2t/datasets/humaneval.jsonl"
+  },
+  "warmup_datasets": {
+    "gsm8k": "/srv/t2t/datasets/gsm8k.non_test.jsonl",
+    "hotpotqa": "/srv/t2t/datasets/hotpotqa.non_test.jsonl",
+    "humaneval": "/srv/t2t/datasets/humaneval.non_test.jsonl"
+  },
+  "prepared": "/srv/t2t/prepared",
+  "runs": "/srv/t2t/runs"
+}
