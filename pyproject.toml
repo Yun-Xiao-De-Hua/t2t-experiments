@@ -7,6 +7,7 @@ name = "t2t-experiments"
 version = "0.1.0"
 description = "Reproduction of a 24-condition text communication baseline"
 readme = "README.md"
+license = {file = "LICENSE"}
 requires-python = ">=3.11,<3.12"
 dependencies = ["torch==2.8.0", "transformers==4.57.6", "tokenizers==0.22.2", "numpy==2.4.6", "accelerate==1.12.0"]
 

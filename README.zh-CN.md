@@ -1,6 +1,10 @@
 # T2T 文本通信基线实验
 
-[English](README.md) | [简体中文](README.zh-CN.md)
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](pyproject.toml)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.8.0-EE4C2C?logo=pytorch&logoColor=white)](requirements.lock.txt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+**[中文说明](README.md) | [English Description](README.en.md)**
 
 本仓库提供 T2T 文本通信基线的复现代码、最终冻结提示词和实验结果。在三组 Qwen3 Sender→Receiver 模型方向上，围绕数学推理、问答和代码生成任务开展24条件实验，统计原始及去格式后答案质量、通信字节量、分阶段推理时延与显存开销。评测采用 [GSM8K](https://github.com/openai/grade-school-math)、[HotpotQA](https://hotpotqa.github.io/) 和 [HumanEval](https://github.com/openai/human-eval)，共保留97,578条逐题实验指标。
 
@@ -114,4 +118,4 @@ t2t-experiments --config configs/experiment.json run \
 - [HotpotQA — A Dataset for Diverse, Explainable Multi-hop Question Answering](https://hotpotqa.github.io/): distractor / dev, 7,405; common subset 7,345.
 - [HumanEval — Evaluating Large Language Models Trained on Code](https://github.com/openai/human-eval): original / test, 164.
 
-模型和数据版本见 `configs/models.json`、`configs/experiment.json`。第三方说明见 [NOTICE](third_party/NOTICE.md)。
+模型和数据版本见 `configs/models.json`、`configs/experiment.json`。项目代码采用 [MIT 开源协议](LICENSE)，第三方说明见 [NOTICE](third_party/NOTICE.md)。

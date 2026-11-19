@@ -16,5 +16,5 @@ Qwen3 model weights/tokenizers are supplied separately; model revisions are in
 `configs/models.json`. Model and dataset licenses are independent of this code.
 Bubblewrap is an external system dependency, not vendored here.
 
-Project-level license, author list and citation are pending the project team's decision.
-No project-level open-source license grant is asserted by this delivery.
+Project code is licensed under the MIT License; see [LICENSE](../LICENSE).
+Third-party code, model weights, and datasets retain their respective licenses.
